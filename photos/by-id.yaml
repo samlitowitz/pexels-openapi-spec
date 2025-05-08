@@ -1,0 +1,28 @@
+get:
+  externalDocs:
+    url: https://www.pexels.com/api/documentation#photos-show
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  responses:
+    "200":
+      description: OK
+      headers:
+        X-RateLimit-Limit:
+          schema:
+            type: integer
+        X-RateLimit-Remaining:
+          schema:
+            type: integer
+        X-RateLimit-Reset:
+          schema:
+            type: string
+            format: date-time
+      content:
+        application/json:
+          schema:
+            $ref: "./photo.yaml"

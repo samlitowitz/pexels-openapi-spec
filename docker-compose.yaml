@@ -1,0 +1,10 @@
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui-container"
+    ports:
+      - "8089:8080"
+    volumes:
+      - ./:/tmp
+    environment:
+      SWAGGER_JSON: /tmp/pexels.yaml

@@ -1,0 +1,26 @@
+openapi: 3.1.1
+info:
+  title: Pexels API
+  version: 1.0.0
+servers:
+  - url: https://api.pexels.com
+    description: Officials Pexels server
+components:
+  securitySchemes:
+    APIKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+security:
+  - APIKeyAuth: [ ]
+tags:
+  - name: photos
+    externalDocs:
+      url: https://www.pexels.com/api/documentation/#photos
+paths:
+  /v1/search:
+    $ref: "./photos/search.yaml"
+  /v1/curated:
+    $ref: "./photos/curated.yaml"
+  /v1/photos/{id}:
+    $ref: "./photos/by-id.yaml"

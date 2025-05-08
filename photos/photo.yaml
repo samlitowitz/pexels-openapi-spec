@@ -1,0 +1,40 @@
+type: object
+properties:
+  id:
+    type: integer
+  width:
+    type: integer
+  height:
+    type: integer
+  url:
+    type: string
+  photographer:
+    type: string
+  photographer_url:
+    type: string
+  photographer_id:
+    type: integer
+  avg_color:
+    type: string
+  src:
+    type: object
+    properties:
+      original:
+        type: string
+      large:
+        type: string
+      large2x:
+        type: string
+      medium:
+        type: string
+      small:
+        type: string
+      portrait:
+        type: string
+      landscape:
+        type: string
+      tiny:
+        type: string
+  alt:
+    type: string
+
